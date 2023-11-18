@@ -3,9 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Montserrat:wght@700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <title>Landing Page | Task 01 of Level 1</title>
 </head>
 <body>
-    <h1>INTERNSHIP at OASIS InfoByte</h1>
+
+    
+
+    <header>
+        <h1>logo</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+
+        <section class="main-content">
+            <h2> HERE YOU CAN DO EVERY THING! </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Totam optio soluta corrupti perferendis assumenda, perspiciatis natus, suscipit esse voluptate aliquid iure, nisi dignissimos?
+                Repellat vitae corporis pariatur expedita aliquam alias?
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Asperiores totam obcaecati iure corrupti,
+                quisquam tenetur corporis earum tempore magni provident ex, cumque, similique doloribus!
+                Vero consequuntur officiis nam sequi maiores!
+            </p>
+
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Beatae porro, ut consectetur voluptas fugiat illum fugit sint,
+                saepe dolorum error nobis minima architecto.
+                Sit nisi veritatis modi praesentium voluptatum commodi
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Natus neque nobis nisi beatae, minima, consequatur cumque enim quisquam vel qui cum, odit porro.
+                Repellendus culpa veritatis, dolore praesentium ipsam recusandae.
+            </p>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veritatis ullam minima ex delectus dignissimos, perferendis voluptatem sed? Corrupti,
+                ducimus amet tenetur maiores veritatis magni culpa recusandae ut nobis saepe cupiditate!
+            </p>
+        </section>
+
+        <section id="contact" class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="process_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+             <button class="cta-button" type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 OASIS. All rights reserved.</p>
+    </footer>
+    
 </body>
 </html>
