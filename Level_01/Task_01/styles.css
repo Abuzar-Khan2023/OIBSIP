@@ -1,26 +1,34 @@
+* {
+    text-decoration: none;
+}
+
 body, h1, h2, p, ul {
     margin: 0;
     padding: 0;
 }
 
+/* Body Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f8f8f8;
+    background-color: #000000;
+    color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
 }
 
+/* Container Styles */
 .container {
     max-width: 90%;
     margin: 0 auto;
-    padding: 2em; 
+    padding: 2em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     background-color: #fff;
 }
 
+/* Header Styles */
 header {
     background-color: #333;
     color: #fff;
@@ -56,6 +64,7 @@ header h1 {
     font-size: 24px;
 }
 
+/* Main Content Styles */
 .main-content {
     text-align: center;
     margin: 2em 0;
@@ -77,33 +86,62 @@ header h1 {
 }
 
 .text-content h2 {
-    color: #fff; 
+    color: #fff;
     font-size: 36px;
     margin-bottom: 10px;
 }
 
 .text-content p {
     font-size: 18px;
-    line-height: 1.6; 
+    line-height: 1.6;
     margin-bottom: 20px;
 }
 
+/* CTA Button Styles */
 .cta-button {
     display: inline-block;
     padding: 12px 24px;
     margin-top: 20px;
     background-color: #4CAF50;
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .cta-button:hover {
     background-color: #45a049;
 }
 
-.contact-form form {
+.cta-button::before {
+    content: "Point here";
+    align-items: center;
+    position: absolute;
+    background: #333; /* Change color as desired */
+    left: 100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+}
+
+.cta-button:hover::before {
+    transform: translateX(0);
+}
+
+
+/* Section Styles */
+#about,
+#services {
+    margin-left:  0;
+    margin-right: 0;
+}
+
+/* Contact Form Styles */
+.contact-form {
     max-width: 600px;
     margin: 0 auto;
 }
@@ -120,7 +158,7 @@ header h1 {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    border: 1px solid #ddd; 
+    border: 1px solid #ddd;
     border-radius: 3px;
 }
 
@@ -130,8 +168,37 @@ header h1 {
     border: 1px solid #4CAF50;
 }
 
-.container {
-    flex: 1;
+/* Animation Styles */
+
+#blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog-post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h2 {
+    color: #333;
+}
+
+.blog-post p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#about {
+    background: url('../src/aboutSec.jpg') center/cover no-repeat;
+}
+
+#services {
+    background: url('../src/ServisesSec.jpg') center/cover no-repeat;
 }
 
 footer {
@@ -142,7 +209,7 @@ footer {
     flex-shrink: 0;
 }
 
-
+/* Media Query for Smaller Screens */
 @media screen and (max-width: 768px) {
     .menu-toggle {
         display: block;
